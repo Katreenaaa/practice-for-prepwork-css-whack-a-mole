@@ -70,3 +70,35 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Audio controls
+document.addEventListener("DOMContentLoaded", () => {
+  const bgAudio = document.getElementById("bg-audio");
+  const toggleBtn = document.getElementById("toggle-audio");
+  let musicStarted = false;
+
+  // Start music on first click anywhere
+  document.body.addEventListener(
+    "click",
+    () => {
+      if (!musicStarted) {
+        bgAudio.play().catch((err) => console.log("Autoplay blocked:", err));
+        toggleBtn.textContent = "🔊";
+        musicStarted = true;
+      }
+    },
+    { once: true }
+  );
+
+  // Toggle button to pause/resume music
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent triggering first-click play again
+    if (bgAudio.paused) {
+      bgAudio.play();
+      toggleBtn.textContent = "🔊";
+    } else {
+      bgAudio.pause();
+      toggleBtn.textContent = "🔇";
+    }
+  });
+});

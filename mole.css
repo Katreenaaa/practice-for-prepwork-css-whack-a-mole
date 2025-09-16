@@ -142,3 +142,38 @@ body {
   transform: translate3d(0, -2px, 0);
   transition: all 0.2s ease;
 }
+
+/* Audio controls */
+.audio-controls {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.audio-controls button,
+.audio-controls button:focus {
+  background: #30a530;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.audio-controls button:hover {
+  background: #2ec02e;
+  border: 1px solid #32cd32;
+  box-shadow: 0 4px 8px rgba(84, 189, 80, 0.664);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.audio-controls button:active {
+  transform: translateY(0);
+  box-shadow: none;
+  transition: all 0.1s ease;
+}
+
+/* End of your code */
