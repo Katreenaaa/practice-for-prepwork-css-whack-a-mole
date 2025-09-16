@@ -1,18 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="mole.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-Mole!</title>
+    <link rel="stylesheet" type="text/css" href="mole.css" />
     <script type="text/javascript" src="mole.js"></script>
   </head>
   <body>
+    <!-- Your code here -->
+
+    <!--<audio autoplay loop>
+      <source src="background-music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio> -->
+    <h1 class="title">Whack-a-Mole!</h1>
+
+    <div class="wgs">
+      <div class="wgs__grass">
+        <!-- First mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--0 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--0"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Second mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--1 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--1"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Third mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--2 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--2"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Fourth mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--3 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--3"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Fifth mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--4 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--4"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Sixth mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--5 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--5"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Seventh mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--6 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--6"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+
+      <div class="wgs__grass">
+        <!-- Eighth mole/hill -->
+        <img
+          class="wgs__mole-head wgs__mole-head--7 wgs__mole-head--hidden"
+          src="mole-head.png"
+          alt="mole head"
+        />
+        <img
+          class="wgs__dirt-pile wgs__dirt-pile--7"
+          src="mole-hill.png"
+          alt="mole hill"
+        />
+      </div>
+    </div>
 
     <!-- UNCOMMENT THE CODE BELOW WHEN DIRECTED -->
-    <!-- <div class="sb">
-      <div class="sb__score-holder">Score <span class="sb__score">0</span></div>
-      <div class="sb__game-over sb__game-over--hidden">Game Over</div>
-      <div class="sb__mole-counter">Moles <span class="sb__moles">30</span></div>
-    </div> -->
-    
-    <!-- Your code here -->
+    <div class="sb">
+      <div class="sb__score-holder">
+        SCORE: <span class="sb__score">0</span>
+      </div>
+      <div class="sb__game-over sb__game-over--hidden">GAME OVER!!!</div>
+      <div class="sb__mole-counter">
+        MOLES: <span class="sb__moles">30</span>
+      </div>
+    </div>
   </body>
 </html>

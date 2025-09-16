@@ -1,28 +1,144 @@
 /* Your code here */
+/*Only add this if you have a hard time seeing
+   all of the moles or you just want to try it
+   out. */
+body {
+  zoom: 0.75;
+  background-color: #bed8ee;
+}
 
+.title {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #228b22;
+  text-shadow: 2px 2px #32cd32;
+  text-transform: uppercase;
+  animation: titleGlow 3s ease-in-out infinite;
+}
 
+@keyframes titleGlow {
+  0% {
+    text-shadow: 2px 2px 4px #32cd32;
+  }
+  50% {
+    text-shadow: 0 0 20px #7cfc00, 0 0 40px #32cd32;
+  }
+  100% {
+    text-shadow: 2px 2px 4px #32cd32;
+  }
+}
+
+.wgs {
+  font-family: "Press Start 2P", cursive;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+
+  /* 🎨 Animated gradient */
+  background: linear-gradient(270deg, #7cfc00, #32cd32, #85d337);
+  background-size: 200% 200%; /* bigger than container so we can move it */
+  animation: lawnWave 17s ease infinite;
+
+  border: 2px solid #228b22;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(3, 65, 8, 0.7);
+  max-width: 100%;
+}
+
+@keyframes lawnWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wgs__grass {
+  position: relative; /* so the mole can be absolute inside */
+  overflow: hidden;
+  width: 320px;
+  height: 261px;
+}
+
+.wgs__mole-head {
+  position: absolute;
+  width: 188px; /* ↓ pick your preferred size */
+  height: 178px; /* keep aspect ratio */
+  top: 0;
+  left: 55px;
+  display: block;
+  transition: margin-top 0.25s ease; /* 👈 smooth slide when margin-top changes */
+}
+
+.wgs__dirt-pile {
+  position: absolute;
+  width: 320px; /* ↓ pick your preferred size */
+  height: 110px; /* keep aspect ratio */
+  top: 130px;
+  left: 0;
+  display: block;
+}
+
+.wgs__mole-head--hidden {
+  margin-top: 261px;
+}
+
+.wgs__mole-head--whacked {
+  animation: moleWhack 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes moleWhack {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
 
 /* UNCOMMENT THE CODE BELOW WHEN DIRECTED */
-/* .sb {
-  background-color: cornflowerblue;
-  border-bottom: 1px solid #645DED;
+.sb {
+  background-color: #4d79cc;
+  border-bottom: 1px solid #645ded;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 15px 15px;
   color: white;
   display: flex;
   font-size: 30px;
+  margin-top: 6px;
   margin-bottom: 50px;
-  padding: 10px 20px;
-} */
-
-/* .sb__mole-counter {
+  padding: 10px 60px;
+}
+.sb__mole-counter {
   flex: 1 0 0;
   text-align: right;
-} */
-
-/* .sb__score-holder {
+}
+.sb__score-holder {
   flex: 1 0 0;
-} */
-
-/* .sb__game-over--hidden {
+}
+.sb__game-over--hidden {
   display: none;
-} */
+}
+
+.sb:hover {
+  cursor: pointer;
+  background-color: #4a73c1;
+  border-bottom: 1px solid #3b52a3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #d0e1ff;
+  transform: translate3d(0, -2px, 0);
+  transition: all 0.2s ease;
+}
