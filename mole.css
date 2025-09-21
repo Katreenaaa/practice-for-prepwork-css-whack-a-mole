@@ -11,7 +11,7 @@ body {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   color: #228b22;
   text-shadow: 2px 2px #32cd32;
   text-transform: uppercase;
@@ -174,6 +174,73 @@ body {
   transform: translateY(0);
   box-shadow: none;
   transition: all 0.1s ease;
+}
+
+/* Responsive Design */
+/* Let each grass cell shrink with the grid */
+.wgs__grass {
+  width: 100%;
+  max-width: 320px; /* largest size on big screens */
+  height: auto; /* let height adjust */
+  aspect-ratio: 320 / 261; /* keeps original proportion */
+  position: relative;
+  overflow: hidden;
+}
+
+.wgs__mole-head {
+  width: 58.75%; /* 188/320 of grass width */
+  height: auto; /* keep aspect ratio */
+  left: 17.1875%; /* (320-188)/2/320 of grass width */
+}
+
+.wgs__dirt-pile {
+  width: 100%; /* always full width of grass */
+  height: auto; /* keep aspect ratio */
+}
+
+/* Adjust top of dirt pile and hidden state with percentages */
+.wgs__dirt-pile {
+  top: 50%; /* sits halfway down the cell */
+}
+
+.wgs__mole-head--hidden {
+  margin-top: 100%; /* push fully below cell */
+}
+
+.sb {
+  font-size: clamp(16px, 2vw + 1rem, 30px);
+}
+
+.title {
+  font-size: clamp(35px, 5vw, 50px);
+  text-align: center;
+}
+
+/* Grid layout changes with screen size */
+.wgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* default: phones – 3 columns */
+  grid-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .wgs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wgs__grass {
+    width: 320px;
+    height: 261px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wgs {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
 
 /* End of your code */
