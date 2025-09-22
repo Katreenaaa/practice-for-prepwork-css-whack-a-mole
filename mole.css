@@ -208,7 +208,8 @@ body {
 }
 
 .sb {
-  font-size: clamp(16px, 2vw + 1rem, 30px);
+  font-size: clamp(13px, 2vw + 1rem, 30px);
+  padding: 5px 30px;
 }
 
 .title {
@@ -231,8 +232,7 @@ body {
 
 @media (min-width: 1024px) {
   .wgs__grass {
-    width: 320px;
-    height: 261px;
+    aspect-ratio: 320 / 261; /* keep the ratio explicit */
   }
 }
 
